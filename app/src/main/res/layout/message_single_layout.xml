@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:id="@+id/message_single_layout">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/message_user_image"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@drawable/avatar" />
+
+    <TextView
+        android:id="@+id/message_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/white"
+        android:layout_toRightOf="@id/message_user_image"
+        android:background="@drawable/message_single_background"
+        android:padding="15dp"
+        android:text="Text View"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/message_user_background"
+        android:padding="15dp"
+        android:text="Text View"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14sp"
+        android:id="@+id/user_message"/>
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/imagetosendbyother"
+        android:layout_below="@id/user_message"
+        android:layout_marginLeft="100dp"
+        />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/imagetosendbyuser"
+        android:layout_below="@id/user_message"
+        android:layout_marginLeft="25dp"
+        />
+
+
+</RelativeLayout>

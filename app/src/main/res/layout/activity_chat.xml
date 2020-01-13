@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ChatActivity"
+    android:background="#cccccc">
+    <include layout="@layout/app_bar_layout" android:id="@+id/chattoolbar"/>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/message_swipe_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@id/Chat_LinearLayout"
+        android:layout_below="@id/chattoolbar">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/messages_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/Chat_LinearLayout"
+            android:layout_below="@id/chattoolbar"></android.support.v7.widget.RecyclerView>
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:id="@+id/Chat_LinearLayout"
+        android:background="@android:color/white">
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/add"
+        android:id="@+id/chatadd_btn"/>
+        <EditText
+            android:textAlignment="center"
+            android:textSize="24dp"
+            android:layout_width="320dp"
+            android:layout_height="45dp"
+            android:hint="Enter Message"
+            android:id="@+id/chat_message"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/send"
+            android:id="@+id/chat_send"/>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
